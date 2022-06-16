@@ -1,0 +1,71 @@
+.EcritureBlanche {
+  color: White;
+}
+
+header {
+  margin-top: 20px;
+}
+header #logo {
+  width: 60%;
+}
+header button {
+  height: 60px;
+  padding: 10px 25px 10px 25px;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #3A3A3A;
+  border-color: #3A3A3A;
+  font-family: Arial;
+  font-size: 17px;
+  text-decoration: none;
+}
+header .buttonBlack {
+  background-color: #3A3A3A;
+  color: White;
+}
+header #buttonLogin {
+  border-radius: 5px 0px 0px 5px;
+}
+header #buttonRegister {
+  border-radius: 0px 5px 5px 0px;
+}
+header #trait {
+  margin-top: 20px;
+  background-color: #3A3A3A;
+  height: 2px;
+  width: 100%;
+}
+
+Footer {
+  margin-top: 50px;
+}
+Footer #Footer {
+  background-color: #3A3A3A;
+  height: 250px;
+}
+Footer #Footer p {
+  text-align: center;
+}
+
+section .marginTop25 {
+  margin-top: 25px;
+}
+section button {
+  height: 60px;
+  padding: 10px 25px 10px 25px;
+  text-align: center;
+  background-color: transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  color: #3A3A3A;
+  border-color: #3A3A3A;
+  font-family: Arial;
+  font-size: 17px;
+  text-decoration: none;
+}
+section .buttonBlack {
+  background-color: #3A3A3A;
+  color: White;
+}/*# sourceMappingURL=style.css.map */

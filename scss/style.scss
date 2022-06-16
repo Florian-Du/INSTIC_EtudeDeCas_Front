@@ -1,0 +1,75 @@
+$primaryColor: #3A3A3A;
+$secondaryColor:  White;
+
+.EcritureBlanche {
+    color: $secondaryColor;
+}
+
+header {
+    margin-top: 20px;
+    #logo {
+        width: 60%;
+    }
+    button {
+        height: 60px;
+        padding: 10px 25px 10px 25px;
+        text-align: center;
+        background-color:transparent;
+        border-radius:5px;
+        cursor:pointer;
+        color: $primaryColor;
+        border-color: $primaryColor;
+        font-family:Arial;
+        font-size:17px;
+        text-decoration:none;
+    }
+    .buttonBlack {
+        background-color: $primaryColor;
+        color: $secondaryColor;
+    }
+    #buttonLogin {
+        border-radius: 5px 0px 0px 5px;
+    }
+    #buttonRegister {
+        border-radius: 0px 5px 5px 0px;
+    }
+    #trait {
+        margin-top: 20px;
+        background-color: $primaryColor;
+        height: 2px;
+        width: 100%;
+    }
+}
+Footer {
+    margin-top: 50px;
+    #Footer {
+        background-color: $primaryColor;
+        height: 250px; 
+        p {
+            text-align: center;
+        }
+    }
+}
+
+section {
+    .marginTop25 {
+        margin-top: 25px;
+    }
+    button {
+        height: 60px;
+        padding: 10px 25px 10px 25px;
+        text-align: center;
+        background-color:transparent;
+        border-radius:5px;
+        cursor:pointer;
+        color: $primaryColor;
+        border-color: $primaryColor;
+        font-family:Arial;
+        font-size:17px;
+        text-decoration:none;
+    }
+    .buttonBlack {
+        background-color: $primaryColor;
+        color: $secondaryColor;
+    }
+}
