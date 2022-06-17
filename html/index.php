@@ -1,7 +1,5 @@
 <?php
-
-
-
+    session_start();
 ?>
 
 
@@ -20,12 +18,25 @@
     <header class="container">
         <div class="row">
             <div class="col-4">
-                <img id="logo" src="../img/logo.png">
+                <a href="./index.php">
+                    <img id="logo" src="../img/logo.png">
+                </a>
             </div>
             <button class="col-2 offset-1">Réserver</button>
             
-            <button id="buttonLogin" class="col-2 offset-1" onclick="window.location.href = '../html/login.html'">Se connecter</button>
-            <button id="buttonRegister" class="col-2 buttonBlack">S'inscrire</button>
+            <?php
+                if (isset($_SESSION["Email"]) && $_SESSION["Email"] != null) {
+            ?>
+                <button id="buttonLogin buttonBlack" class="col-2 offset-1" onclick="window.location.href = '../html/deconnect.php'">Se deconnecter</button>
+            <?php
+                }else {
+            ?>
+                <button id="buttonLogin" class="col-2 offset-1" onclick="window.location.href = '../html/login.html'">Se connecter</button>
+                <button id="buttonRegister" class="col-2 buttonBlack">S'inscrire</button>
+            <?php
+                }
+            ?>
+            
         </div>
         <div class="row">
             <div id="trait" class="col-12"></div>

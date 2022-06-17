@@ -1,35 +1,20 @@
 <?php
-    $headers = array();
-    array_push($headers,"Content-Type:application/json");
-   
+    require("CurlController.php");
 
     $arr = array("Email" => $_POST["Email"], "Password" => $_POST["Password"]);
-   // $envoie = json_encode($arr);
+    $envoie = json_encode($arr);
 
-    var_dump($arr);
-    $ch = curl_init();
-    curl_setopt($ch, CURLOPT_URL, "http://localhost:7058/Compte/Login");
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $arr);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    curl_setopt($ch, CURLOPT_HEADER, true); 
-    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers); 
-    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+    $Controller = new CurlController;
+    $Output = $Controller->Requete("https://localhost:7058/Compte/Login",$envoie,"POST");
 
-    $output = curl_exec($ch);
+   // var_dump($Output);
+    $a = json_decode($Output); 
 
-    var_dump(curl_error($ch));
-    var_dump($output);
+    session_start();
+    $_SESSION["Id"] = $a->Id;
+    $_SESSION["Prenom"] = $a->Prenom;
+    $_SESSION["Nom"] = $a->Nom;
+    $_SESSION["Email"] = $a->Email;
 
-    if ($output) {
-        if ($output != null) {
-            var_dump($output);
-        }else {
-            var_dump("Compte inexistant");
-        }
-    }else {
-        var_dump("Erreur lors de la recuperation du compte");
-    }
-   
+    header('Location: ./index.php');
 ?>
